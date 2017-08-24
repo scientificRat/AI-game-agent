@@ -1,11 +1,10 @@
-package com.scientificrat.game.http;
+package com.scientificrat.game.server;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.*;
 import java.net.InetSocketAddress;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
@@ -25,7 +24,6 @@ public class SimpleHttpServer {
             String path = httpExchange.getRequestURI().getPath();
             String method = httpExchange.getRequestMethod();
             String protocol = httpExchange.getProtocol();
-            OutputStream responseBody = httpExchange.getResponseBody();
             InputStream requestBody = httpExchange.getRequestBody();
             httpExchange.getResponseHeaders().add("Server", "SimpleRat");
             // log

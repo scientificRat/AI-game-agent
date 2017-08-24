@@ -1,7 +1,6 @@
-package com.scientificrat.game.server.retrosnake;
+package com.scientificrat.game.game.retrosnake;
 
 import com.scientificrat.game.datastruct.Position;
-
 
 import java.util.List;
 
